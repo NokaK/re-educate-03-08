@@ -1,0 +1,148 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box {
+    height: 420px;
+    width: 463px;
+    border-radius: 15px;
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    transition-property: all;
+    transition-delay: 0.5s;
+    transition-duration: 0.9s;
+    transition-timing-function: linear ; 
+   
+}
+/* .box:hover {
+    width: 763px;
+    background-color: red;
+} */
+.box:hover  p {
+    left: 150px;
+}
+.box img  {
+    width:100%;
+    height: 100%;
+}
+.box  p{
+    position: absolute;
+    bottom: 60px;
+    width: 80%;
+    left: 50px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    transition-property: all;
+    transition-delay: 0.5s;
+    transition-duration: 0.9s;
+    transition-timing-function: linear ; 
+}
+.box:nth-child(odd) {
+    height: 300px;
+}
+.box:last-child {
+    width:600px
+}
+.box:nth-child(2) p {
+    border-radius: 0px;
+}
+.box::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width:40px;
+    background-color: black;
+    margin: 10px;
+}
+.radios {
+    background-color: blueviolet;
+    padding: 30px;
+}
+
+
+
+.background {
+    background-image: url('./images/box-image.png');
+    background-size: cover;
+    position: absolute;
+    animation-name: bgAnimation;
+    animation-duration: 3s;
+    /* animation-delay: 0.3s; */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: 1;
+    /* transition-property: all;
+    transition-delay: 0.5s;
+    transition-duration: 0.9s;
+    transition-timing-function: linear ;  */
+}
+/* .background:hover {
+    width: 500px;
+    background-image: url('./images/bg.jpeg');
+} */
+
+@keyframes bgAnimation {
+    0%{
+        top:10px;
+        right:10px;
+        border-radius: 0px;
+        width: 300px;
+        height: 300px;
+    
+    }
+    50% {
+        top:200px;
+        right:200px;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        
+    }
+    100% {
+        top:400px;
+        right:400px;
+        transform: rotate(-70deg);
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.animation {
+    width:100px;;
+    height: 100px;
+    position: absolute;
+    animation-name: moveBox;
+    animation-duration: 3s;
+    /* animation-delay: 0.3s; */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes moveBox {
+    0%{
+        top:10px;
+        left:10px;
+        /* border-radius: 0px; */
+        background-color: blue;
+    }
+    50% {
+        top:200px;
+        left:200px;
+        /* border-radius: 50%; */
+        background-color: rgb(255, 174, 0);
+    }
+    100% {
+        top:400px;
+        left:400px;
+        transform: rotate(-70deg);
+        background-color: rgb(255, 174, 0);
+    }
+}
